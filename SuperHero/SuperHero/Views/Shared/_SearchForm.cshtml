@@ -1,0 +1,12 @@
+﻿<h1 class="text-center">Search for your hero or villain</h1>
+<form method="get" action="/">
+    <div class="form-group row">
+        <div class="col-8 col-sm-10 col-md-10 col-lg-10">
+            <input required value="@Session["searchString"]" class="form-control form-control-sm" name="searchString" type="text" placeholder="Type hero or villain related word">
+        </div>
+
+        <div class="col-2 col-sm-2 col-md-2 col-lg-2">
+            <button type="submit" class="btn btn-success">Search</button>
+        </div>
+    </div>
+</form>

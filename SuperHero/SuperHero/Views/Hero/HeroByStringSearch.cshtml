@@ -1,0 +1,72 @@
+﻿@model SuperHero.Domain.Concrete.ResponseHero
+
+@{
+    ViewBag.Title = "HeroByStringSearch";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<link href="~/Datatable/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="~/Datatable/responsive.dataTables.min.css" rel="stylesheet" />
+@if (Model != null)
+{
+    if (!string.IsNullOrWhiteSpace(Model.MessageError))
+    {
+        <h2 class="text-center"><i><b>Error found</b>:@Model.MessageError</i></h2>
+    }
+    else
+    {
+        <h2>Heroes found</h2>
+
+        <table class="table" id="tableHeroes">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Image</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.currentHeroes)
+                {
+                    <tr>
+                        <th>@item.name</th>
+                        <th>@item.gender</th>
+                        <th><img style="width: 100px;" src="@item.image" /></th>
+                        <th><a class="btn btn-outline-primary" href="/character/@item.id">Detail</a></th>
+                        <th scope="col"></th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+}
+else
+{
+    <h3 class="text-center"><i>No heroes or villain were found, try again.</i></h3>
+}
+
+@section Scripts
+{
+    <script src="~/Datatable/jquery.dataTables.min.js"></script>
+    <script src="~/Datatable/dataTables.responsive.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            if (location.href.includes('?')) {
+                history.pushState({}, null, location.href.split('?')[0]);
+            }
+            $('#tableHeroes').DataTable({
+                responsive: true,
+                autoWitdh: true,
+                "language": {
+                    "sSearch": "Filter:",
+                },
+                "order": [[0, "asc"]]
+            });
+        });
+    </script>
+}

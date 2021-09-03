@@ -1,0 +1,51 @@
+﻿@model SuperHero.Domain.Concrete.ResponseHero
+@{
+    ViewBag.Title = "Character";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container">
+    @if (Model != null)
+    {
+        if (!string.IsNullOrWhiteSpace(Model.MessageError))
+        {
+            <h2 class="text-center"><i><b>Error found</b>:@Model.MessageError</i></h2>
+        }
+        else
+        {
+            <a class="btn btn-secondary" href="/?searchString=@Session["searchString"]">Go Back</a>
+            <h2>Detail of hero/villain found</h2>
+
+            <div class="card mb-3">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="@Model.currentHero.image" style="max-width: 100%;" alt="@Model.currentHero.name">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">@Model.currentHero.name</h5>
+                            <hr />
+
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><b>Gende</b>r: @Model.currentHero.gender</li>
+                                <li class="list-group-item"><b>Intelligence</b>: @Model.currentHero.intelligence</li>
+                                <li class="list-group-item"><b>Strength</b>: @Model.currentHero.strength</li>
+                                <li class="list-group-item"><b>Speed</b>: @Model.currentHero.speed</li>
+                                <li class="list-group-item"><b>Durability</b>: @Model.currentHero.durability</li>
+                                <li class="list-group-item"><b>Power</b>: @Model.currentHero.power</li>
+                                <li class="list-group-item"><b>Combat</b>: @Model.currentHero.combat</li>
+                                <li class="list-group-item"><b>Occupation</b>: @Model.currentHero.occupation</li>
+                                <li class="list-group-item"><b>Base</b>: @Model.currentHero.@@base</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <h3 class="text-center"><i>No detail hero or villain was found, try again.</i></h3>
+    }
+</div>
