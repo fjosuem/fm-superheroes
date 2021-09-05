@@ -3,6 +3,8 @@ Assessment-NicaSource
 
 To run the project, it needs 4.7.2 .NET Framework of my Visual Studio 2019
 
+Clean and then rebuild the solution. Run application.
+
 ![image](https://user-images.githubusercontent.com/8882429/132111167-76831bcd-6e0b-4541-8525-893a23026fe9.png)
 
 Url of published site: http://fm-superheroes.azurewebsites.net/
