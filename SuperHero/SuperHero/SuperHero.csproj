@@ -155,6 +155,7 @@
     <Content Include="Datatable\jquery.dataTables.min.css" />
     <Content Include="Datatable\jquery.dataTables.min.js" />
     <Content Include="Datatable\responsive.dataTables.min.css" />
+    <Content Include="Error.html" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

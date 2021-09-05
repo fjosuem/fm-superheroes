@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperHero", "SuperHero\Supe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperHero.Domain", "SuperHero.Domain\SuperHero.Domain.csproj", "{151030C0-3D0E-46C5-A217-1BDA6E888A79}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperHero.Tests", "SuperHero.Tests\SuperHero.Tests.csproj", "{63FEE64D-7648-45CD-AB61-2D36BBB53BF8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{151030C0-3D0E-46C5-A217-1BDA6E888A79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{151030C0-3D0E-46C5-A217-1BDA6E888A79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{151030C0-3D0E-46C5-A217-1BDA6E888A79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63FEE64D-7648-45CD-AB61-2D36BBB53BF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63FEE64D-7648-45CD-AB61-2D36BBB53BF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63FEE64D-7648-45CD-AB61-2D36BBB53BF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63FEE64D-7648-45CD-AB61-2D36BBB53BF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

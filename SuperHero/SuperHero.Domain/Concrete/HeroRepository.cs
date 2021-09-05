@@ -34,7 +34,6 @@ namespace SuperHero.Domain.Concrete
 
                     if (currentHero != null)
                     {
-                        heroFound = AutoMapper.Mapper.Map<Hero>(currentHero);
                         heroFound.id = currentHero?.id;
                         heroFound.name = currentHero?.name;
                         heroFound.gender = currentHero.appearance?.gender;
